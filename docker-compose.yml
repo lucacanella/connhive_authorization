@@ -1,0 +1,28 @@
+version: "2"
+services:
+  web:
+    tty: true
+    image: node:8.11.3-jessie
+    volumes:
+     - /home/blackrabbit/www:/var/www/html
+    environment: 
+     - NEO4J_HOST=neo4j
+     - REDIS_HOST=redis
+    links:
+     - redis
+     - neo4j
+    ports:
+     - "80:80"
+     - "8080:8080"
+     - "8000:8000"
+     - "9229:9229"
+  neo4j:
+    image: neo4j:3.0
+    ports:
+     - "7474:7474"
+     - "7687:7687"
+    volumes:
+     - /home/blackrabbit/neo4j/data:/data
+     - /home/blackrabbit/neo4j/data/logs:/logs
+  redis:
+    image: redis:5.0-rc4

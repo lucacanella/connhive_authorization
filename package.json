@@ -1,0 +1,27 @@
+{
+  "name": "connhive_auth",
+  "version": "0.1.0",
+  "description": "Authorization service.",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect-brk=0.0.0.0:9229 index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "authorization",
+    "users",
+    "groups",
+    "directory",
+    "resources"
+  ],
+  "author": "Luca Canella <info@lucacanella.org>",
+  "license": "ISC",
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "dotenv": "^6.0.0",
+    "neo4j-driver": "^1.6.3",
+    "neode": "^0.1.16",
+    "node-fetch": "^2.2.0",
+    "redis": "^2.8.0"
+  }
+}

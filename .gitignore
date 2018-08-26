@@ -1,0 +1,4 @@
+.env
+.vscode/
+debug.sh
+node_modules/
